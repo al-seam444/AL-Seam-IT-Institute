@@ -1,0 +1,403 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AL Seam IT Institute</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        /* Custom CSS */
+        .hero {
+            background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url('https://images.unsplash.com/photo-1522071820081-009f0129c71c?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1170&q=80');
+            background-size: cover;
+            background-position: center;
+        }
+        
+        .course-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+        }
+        
+        .nav-link::after {
+            content: '';
+            display: block;
+            width: 0;
+            height: 2px;
+            background: #3b82f6;
+            transition: width .3s;
+        }
+        
+        .nav-link:hover::after {
+            width: 100%;
+        }
+    </style>
+</head>
+<body class="font-sans bg-gray-50">
+    <!-- Header/Navigation -->
+    <header class="bg-white shadow-md sticky top-0 z-50">
+        <div class="container mx-auto px-4 py-3 flex justify-between items-center">
+            <div class="flex items-center">
+                <i class="fas fa-laptop-code text-blue-500 text-3xl mr-3"></i>
+                <h1 class="text-2xl font-bold text-gray-800">AL Seam <span class="text-blue-500"> IT Institute</span></h1>
+            </div>
+            
+            <button id="mobile-menu-button" class="md:hidden focus:outline-none">
+                <i class="fas fa-bars text-2xl text-gray-700"></i>
+            </button>
+            
+            <nav class="hidden md:flex space-x-8">
+                <a href="#home" class="nav-link text-gray-700 hover:text-blue-500 font-medium transition">Home</a>
+                <a href="#courses" class="nav-link text-gray-700 hover:text-blue-500 font-medium transition">Courses</a>
+                <a href="#about" class="nav-link text-gray-700 hover:text-blue-500 font-medium transition">About</a>
+                <a href="#contact" class="nav-link text-gray-700 hover:text-blue-500 font-medium transition">Contact</a>
+            </nav>
+        </div>
+        
+        <!-- Mobile Menu -->
+        <div id="mobile-menu" class="hidden md:hidden bg-white py-4 px-4 shadow-lg">
+            <a href="#home" class="block py-2 text-gray-700 hover:text-blue-500 font-medium">Home</a>
+            <a href="#courses" class="block py-2 text-gray-700 hover:text-blue-500 font-medium">Courses</a>
+            <a href="#about" class="block py-2 text-gray-700 hover:text-blue-500 font-medium">About</a>
+            <a href="#contact" class="block py-2 text-gray-700 hover:text-blue-500 font-medium">Contact</a>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero text-white py-20 md:py-32">
+        <div class="container mx-auto px-4 text-center">
+            <h1 class="text-4xl md:text-6xl font-bold mb-6">Empowering Your Digital Future</h1>
+            <p class="text-xl md:text-2xl mb-8 max-w-3xl mx-auto">Professional computer training to boost your career in today's digital world.</p>
+            
+            <div class="flex flex-col sm:flex-row justify-center gap-4">
+                <a href="#courses" class="bg-blue-500 hover:bg-blue-600 text-white font-bold py-3 px-6 rounded-lg transition duration-300 transform hover:scale-105">Explore Courses</a>
+                <a href="#contact" class="bg-transparent hover:bg-white hover:text-blue-500 border-2 border-white text-white font-bold py-3 px-6 rounded-lg transition duration-300 transform hover:scale-105">Contact Us</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Courses Section -->
+    <section id="courses" class="py-16 bg-white">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl md:text-4xl font-bold text-gray-800 mb-4">Our Courses</h2>
+                <div class="w-20 h-1 bg-blue-500 mx-auto"></div>
+                <p class="text-gray-600 mt-6 max-w-2xl mx-auto">We offer comprehensive training programs designed to give you practical skills for the modern workplace.</p>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+                <!-- Course 1 -->
+                <div class="course-card bg-white rounded-lg shadow-md overflow-hidden transition duration-300">
+                    <div class="bg-blue-500 p-4 text-white">
+                        <i class="fas fa-file-word text-4xl mb-3"></i>
+                        <h3 class="text-xl font-bold">Microsoft Office, Excel & PowerPoint</h3>
+                    </div>
+                    <div class="p-6">
+                        <p class="text-gray-600 mb-4">Master the essential office productivity tools used in businesses worldwide.</p>
+                        <ul class="text-gray-700 space-y-2 mb-6">
+                            <li class="flex items-center"><i class="fas fa-check-circle text-green-500 mr-2"></i> Word document processing</li>
+                            <li class="flex items-center"><i class="fas fa-check-circle text-green-500 mr-2"></i> Excel data analysis</li>
+                            <li class="flex items-center"><i class="fas fa-check-circle text-green-500 mr-2"></i> PowerPoint presentations</li>
+                            <li class="flex items-center"><i class="fas fa-check-circle text-green-500 mr-2"></i> Advanced formatting</li>
+                        </ul>
+                        <a href="#contact" class="text-blue-500 font-medium hover:text-blue-700 inline-flex items-center">Enroll Now <i class="fas fa-arrow-right ml-2"></i></a>
+                    </div>
+                </div>
+                
+                <!-- Course 2 -->
+                <div class="course-card bg-white rounded-lg shadow-md overflow-hidden transition duration-300">
+                    <div class="bg-purple-500 p-4 text-white">
+                        <i class="fas fa-code text-4xl mb-3"></i>
+                        <h3 class="text-xl font-bold">Web Development</h3>
+                    </div>
+                    <div class="p-6">
+                        <p class="text-gray-600 mb-4">Learn to build modern, responsive websites and web applications.</p>
+                        <ul class="text-gray-700 space-y-2 mb-6">
+                            <li class="flex items-center"><i class="fas fa-check-circle text-green-500 mr-2"></i> HTML5 & CSS3</li>
+                            <li class="flex items-center"><i class="fas fa-check-circle text-green-500 mr-2"></i> JavaScript fundamentals</li>
+                            <li class="flex items-center"><i class="fas fa-check-circle text-green-500 mr-2"></i> Responsive design</li>
+                            <li class="flex items-center"><i class="fas fa-check-circle text-green-500 mr-2"></i> Front-end frameworks</li>
+                        </ul>
+                        <a href="#contact" class="text-purple-500 font-medium hover:text-purple-700 inline-flex items-center">Enroll Now <i class="fas fa-arrow-right ml-2"></i></a>
+                    </div>
+                </div>
+                
+                <!-- Course 3 -->
+                <div class="course-card bg-white rounded-lg shadow-md overflow-hidden transition duration-300">
+                    <div class="bg-pink-500 p-4 text-white">
+                        <i class="fas fa-paint-brush text-4xl mb-3"></i>
+                        <h3 class="text-xl font-bold">Graphic Design</h3>
+                    </div>
+                    <div class="p-6">
+                        <p class="text-gray-600 mb-4">Develop your creative skills in visual communication and digital design.</p>
+                        <ul class="text-gray-700 space-y-2 mb-6">
+                            <li class="flex items-center"><i class="fas fa-check-circle text-green-500 mr-2"></i> Adobe Photoshop</li>
+                            <li class="flex items-center"><i class="fas fa-check-circle text-green-500 mr-2"></i> Illustrator basics</li>
+                            <li class="flex items-center"><i class="fas fa-check-circle text-green-500 mr-2"></i> Logo design</li>
+                            <li class="flex items-center"><i class="fas fa-check-circle text-green-500 mr-2"></i> Print & digital media</li>
+                        </ul>
+                        <a href="#contact" class="text-pink-500 font-medium hover:text-pink-700 inline-flex items-center">Enroll Now <i class="fas fa-arrow-right ml-2"></i></a>
+                    </div>
+                </div>
+                
+                <!-- Course 4 -->
+                <div class="course-card bg-white rounded-lg shadow-md overflow-hidden transition duration-300">
+                    <div class="bg-green-500 p-4 text-white">
+                        <i class="fas fa-network-wired text-4xl mb-3"></i>
+                        <h3 class="text-xl font-bold">Networking</h3>
+                    </div>
+                    <div class="p-6">
+                        <p class="text-gray-600 mb-4">Gain expertise in computer networks and infrastructure setup.</p>
+                        <ul class="text-gray-700 space-y-2 mb-6">
+                            <li class="flex items-center"><i class="fas fa-check-circle text-green-500 mr-2"></i> Network fundamentals</li>
+                            <li class="flex items-center"><i class="fas fa-check-circle text-green-500 mr-2"></i> TCP/IP protocols</li>
+                            <li class="flex items-center"><i class="fas fa-check-circle text-green-500 mr-2"></i> Router configuration</li>
+                            <li class="flex items-center"><i class="fas fa-check-circle text-green-500 mr-2"></i> Troubleshooting</li>
+                        </ul>
+                        <a href="#contact" class="text-green-500 font-medium hover:text-green-700 inline-flex items-center">Enroll Now <i class="fas fa-arrow-right ml-2"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="py-16 bg-gray-100">
+        <div class="container mx-auto px-4">
+            <div class="flex flex-col lg:flex-row items-center">
+                <div class="lg:w-1/2 mb-10 lg:mb-0 lg:pr-12">
+                    <img src="https://images.unsplash.com/photo-1541829070764-84a7d30dd3f3?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTF8fENvbXB1dGVyJTIwVHJhaW5pbmclMjBDZW50ZXJ8ZW58MHx8MHx8fDA%3D" alt="About AL Seam" class="rounded-lg shadow-lg w-full">
+                </div>
+                <div class="lg:w-1/2">
+                    <h2 class="text-3xl md:text-4xl font-bold text-gray-800 mb-6">About AL Seam IT Institute</h2>
+                    <div class="w-20 h-1 bg-blue-500 mb-6"></div>
+                    <p class="text-gray-600 mb-4">AL Seam IT Institute is a premier institution dedicated to providing high-quality computer education to individuals and professionals seeking to enhance their digital skills.</p>
+                    <p class="text-gray-600 mb-6">Founded with the vision of bridging the digital skills gap, we offer practical, hands-on training in various computer applications and technologies that are essential in today's workplace.</p>
+                    
+                    <div class="space-y-4">
+                        <div class="flex items-start">
+                            <div class="bg-blue-100 p-2 rounded-full mr-4">
+                                <i class="fas fa-chalkboard-teacher text-blue-500"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-bold text-gray-800 mb-1">Experienced Instructors</h4>
+                                <p class="text-gray-600">Learn from industry professionals with years of practical experience.</p>
+                            </div>
+                        </div>
+                        
+                        <div class="flex items-start">
+                            <div class="bg-blue-100 p-2 rounded-full mr-4">
+                                <i class="fas fa-laptop-code text-blue-500"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-bold text-gray-800 mb-1">Hands-on Training</h4>
+                                <p class="text-gray-600">Practical sessions with real-world applications and projects.</p>
+                            </div>
+                        </div>
+                        
+                        <div class="flex items-start">
+                            <div class="bg-blue-100 p-2 rounded-full mr-4">
+                                <i class="fas fa-certificate text-blue-500"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-bold text-gray-800 mb-1">Certification</h4>
+                                <p class="text-gray-600">Receive recognized certificates upon course completion.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="py-16 bg-gray-800 text-white">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl md:text-4xl font-bold mb-4">Contact Us</h2>
+                <div class="w-20 h-1 bg-blue-500 mx-auto"></div>
+                <p class="text-gray-300 mt-6 max-w-2xl mx-auto">Have questions about our courses? Want to enroll? Reach out to us and we'll get back to you as soon as possible.</p>
+            </div>
+            
+            <div class="flex flex-col lg:flex-row gap-8">
+                <div class="lg:w-1/2">
+                    <form class="space-y-6">
+                        <div>
+                            <label for="name" class="block text-sm font-medium mb-1">Full Name</label>
+                            <input type="text" id="name" class="w-full px-4 py-3 rounded-lg bg-gray-700 border border-gray-600 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent" placeholder="Your Name">
+                        </div>
+                        
+                        <div>
+                            <label for="email" class="block text-sm font-medium mb-1">Email Address</label>
+                            <input type="email" id="email" class="w-full px-4 py-3 rounded-lg bg-gray-700 border border-gray-600 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent" placeholder="your@email.com">
+                        </div>
+                        
+                        <div>
+                            <label for="course" class="block text-sm font-medium mb-1">Course Interest</label>
+                            <select id="course" class="w-full px-4 py-3 rounded-lg bg-gray-700 border border-gray-600 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent">
+                                <option value="">Select a course</option>
+                                <option value="office">Microsoft Office, Excel & PowerPoint</option>
+                                <option value="web">Web Development</option>
+                                <option value="design">Graphic Design</option>
+                                <option value="network">Networking</option>
+                            </select>
+                        </div>
+                        
+                        <div>
+                            <label for="message" class="block text-sm font-medium mb-1">Message</label>
+                            <textarea id="message" rows="4" class="w-full px-4 py-3 rounded-lg bg-gray-700 border border-gray-600 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent" placeholder="Your message..."></textarea>
+                        </div>
+                        
+                        <button type="submit" class="w-full bg-blue-500 hover:bg-blue-600 text-white font-bold py-3 px-6 rounded-lg transition duration-300">Send Message</button>
+                    </form>
+                </div>
+                
+                <div class="lg:w-1/2">
+                    <div class="bg-gray-700 p-8 rounded-lg h-full">
+                        <h3 class="text-xl font-bold mb-6">Contact Information</h3>
+                        
+                        <div class="space-y-6">
+                            <div class="flex items-start">
+                                <div class="bg-blue-500 p-2 rounded-full mr-4">
+                                    <i class="fas fa-map-marker-alt"></i>
+                                </div>
+                                <div>
+                                    <h4 class="font-bold mb-1">Address</h4>
+                                    <p class="text-gray-300">Nazipur Mosque Market, Patnitola, Naogoan, Bangladesh</p>
+                                </div>
+                            </div>
+                            
+                            <div class="flex items-start">
+                                <div class="bg-blue-500 p-2 rounded-full mr-4">
+                                    <i class="fas fa-phone-alt"></i>
+                                </div>
+                                <div>
+                                    <h4 class="font-bold mb-1">Phone</h4>
+                                    <p class="text-gray-300">01338-118575</p>
+                                    <p class="text-gray-300">+88-09638312749</p>
+                                </div>
+                            </div>
+                            
+                            <div class="flex items-start">
+                                <div class="bg-blue-500 p-2 rounded-full mr-4">
+                                    <i class="fas fa-envelope"></i>
+                                </div>
+                                <div>
+                                    <h4 class="font-bold mb-1">Email</h4>
+                                    <p class="text-gray-300">info-@alseam4.0@gmail.com</p>
+                                    <p class="text-gray-300">admissions-@alseam4.0@gmail.com</p>
+                                </div>
+                            </div>
+                            
+                            <div class="flex items-start">
+                                <div class="bg-blue-500 p-2 rounded-full mr-4">
+                                    <i class="fas fa-clock"></i>
+                                </div>
+                                <div>
+                                    <h4 class="font-bold mb-1">Opening Hours</h4>
+                                    <p class="text-gray-300">Saturday - Thursday: 7:00 AM - 10:00 PM</p>
+                                    <p class="text-gray-300">Friday: 4:00 PM - 9:00 PM</p>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="mt-8">
+                            <h4 class="font-bold mb-4">Follow Us</h4>
+                            <div class="flex space-x-4">
+                                <a href="https://www.facebook.com/md.al.seam4.0" class="bg-gray-600 hover:bg-blue-500 p-3 rounded-full transition duration-300"><i class="fab fa-facebook-f"></i></a>
+                                <a href="https://x.com/AL_SEAM_444" class="bg-gray-600 hover:bg-blue-400 p-3 rounded-full transition duration-300"><i class="fab fa-twitter"></i></a>
+                                <a href="https://www.instagram.com/al_seam_4.0/" class="bg-gray-600 hover:bg-pink-500 p-3 rounded-full transition duration-300"><i class="fab fa-instagram"></i></a>
+                                <a href="https://www.linkedin.com/in/al-seam-as444/" class="bg-gray-600 hover:bg-blue-700 p-3 rounded-full transition duration-300"><i class="fab fa-linkedin-in"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-gray-400 py-8">
+        <div class="container mx-auto px-4">
+            <div class="flex flex-col md:flex-row justify-between items-center">
+                <div class="mb-6 md:mb-0">
+                    <div class="flex items-center">
+                        <i class="fas fa-laptop-code text-blue-500 text-2xl mr-3"></i>
+                        <h2 class="text-xl font-bold text-white">AL Seam IT Institute</h2>
+                    </div>
+                    <p class="mt-2 text-sm">Empowering individuals through digital education.</p>
+                </div>
+                
+                <div class="flex flex-col items-center md:items-end">
+                    <div class="flex space-x-6 mb-4">
+                        <a href="#home" class="hover:text-white transition">Home</a>
+                        <a href="#courses" class="hover:text-white transition">Courses</a>
+                        <a href="#about" class="hover:text-white transition">About</a>
+                        <a href="#contact" class="hover:text-white transition">Contact</a>
+                    </div>
+                    <p class="text-sm">© 2025 AL Seam IT Institute. All rights reserved. Developer By <mark><a href="https://al-seam444.github.io/"><strong> AL  SEAM </strong></a> </mark> </p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Back to Top Button -->
+    <button id="back-to-top" class="fixed bottom-8 right-8 bg-blue-500 text-white p-3 rounded-full shadow-lg opacity-0 invisible transition-all duration-300">
+        <i class="fas fa-arrow-up"></i>
+    </button>
+
+    <script>
+        // Mobile menu toggle
+        const mobileMenuButton = document.getElementById('mobile-menu-button');
+        const mobileMenu = document.getElementById('mobile-menu');
+        
+        mobileMenuButton.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+        
+        // Smooth scrolling for navigation links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function(e) {
+                e.preventDefault();
+                
+                // Close mobile menu if open
+                mobileMenu.classList.add('hidden');
+                
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+        
+        // Back to top button
+        const backToTopButton = document.getElementById('back-to-top');
+        
+        window.addEventListener('scroll', () => {
+            if (window.pageYOffset > 300) {
+                backToTopButton.classList.remove('opacity-0', 'invisible');
+                backToTopButton.classList.add('opacity-100', 'visible');
+            } else {
+                backToTopButton.classList.remove('opacity-100', 'visible');
+                backToTopButton.classList.add('opacity-0', 'invisible');
+            }
+        });
+        
+        backToTopButton.addEventListener('click', () => {
+            window.scrollTo({
+                top: 0,
+                behavior: 'smooth'
+            });
+        });
+        
+        // Form submission (prevent default for demo)
+        const form = document.querySelector('form');
+        if (form) {
+            form.addEventListener('submit', (e) => {
+                e.preventDefault();
+                alert('Thank you for your message! We will contact you soon.');
+                form.reset();
+            });
+        }
+    </script>
+</body>
+</html>
